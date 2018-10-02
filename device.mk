@@ -64,3 +64,6 @@ endif
 # Keymaster
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8937
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
