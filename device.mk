@@ -32,7 +32,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl.recovery \
+    android.hardware.boot@1.1-impl-qti.recovery \
     bootctrl.sdm455_64.recovery
 
 # Apex libraries
