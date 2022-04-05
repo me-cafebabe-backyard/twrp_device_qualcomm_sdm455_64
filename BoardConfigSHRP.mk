@@ -5,8 +5,8 @@ ifneq ($(SHRP_BUILD),)
 IS_OFFICIAL := false
 
 # Mandatory flags
-SHRP_DEVICE_CODE := mi8937
-SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
+SHRP_DEVICE_CODE := sdm455_64
+SHRP_PATH := device/qualcomm/$(SHRP_DEVICE_CODE)
 SHRP_REC_TYPE := Normal
 SHRP_DEVICE_TYPE := A-only
 SHRP_REC := /dev/block/platform/soc/7824900.sdhci/by-name/recovery

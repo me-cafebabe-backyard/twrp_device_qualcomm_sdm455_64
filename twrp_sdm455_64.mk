@@ -15,22 +15,22 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := mi8937
+PRODUCT_RELEASE_NAME := sdm455_64
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
 # Inherit from device
-$(call inherit-product, device/xiaomi/mi8937/device.mk)
+$(call inherit-product, device/qualcomm/sdm455_64/device.mk)
 
 # Inherit common product files.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Set those variables here to overwrite the inherited values.
-BOARD_VENDOR := Xiaomi
-PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := mi8937
-PRODUCT_NAME := twrp_mi8937
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := MSM8937
-TARGET_VENDOR := Xiaomi
+BOARD_VENDOR := Qualcomm
+PRODUCT_BRAND := Qualcomm
+PRODUCT_DEVICE := sdm455_64
+PRODUCT_NAME := twrp_sdm455_64
+PRODUCT_MANUFACTURER := Qualcomm
+PRODUCT_MODEL := SDM455
+TARGET_VENDOR := Qualcomm

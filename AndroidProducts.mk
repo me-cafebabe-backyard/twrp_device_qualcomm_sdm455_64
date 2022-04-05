@@ -15,17 +15,17 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_mi8937.mk
+	$(LOCAL_DIR)/omni_sdm455_64.mk
 
 COMMON_LUNCH_CHOICES := \
-	omni_mi8937-user \
-	omni_mi8937-userdebug \
-	omni_mi8937-eng
+	omni_sdm455_64-user \
+	omni_sdm455_64-userdebug \
+	omni_sdm455_64-eng
 
 PRODUCT_MAKEFILES += \
-	$(LOCAL_DIR)/twrp_mi8937.mk
+	$(LOCAL_DIR)/twrp_sdm455_64.mk
 
 COMMON_LUNCH_CHOICES += \
-	twrp_mi8937-user \
-	twrp_mi8937-userdebug \
-	twrp_mi8937-eng
+	twrp_sdm455_64-user \
+	twrp_sdm455_64-userdebug \
+	twrp_sdm455_64-eng
