@@ -16,6 +16,8 @@ on boot
 
 # HBTP
     chmod 0666 /dev/hbtp_input
+    mkdir /data/vendor
+    mkdir /data/vendor/hbtp
     start hbtp
 
 service adsprpcd_root /system/bin/adsprpcd
