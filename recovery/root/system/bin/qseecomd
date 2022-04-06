@@ -1,2 +1,3 @@
 #!/sbin/sh
+start _qseecomd
 exit 0

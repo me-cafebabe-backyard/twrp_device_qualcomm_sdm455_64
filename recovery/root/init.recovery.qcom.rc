@@ -11,8 +11,10 @@ on boot
 # Mount dependency partitions
     mkdir /dsp
     mkdir /firmware
-    mount ext4 /dev/block/bootdevice/by-name/dsp_a /dsp ro
-    mount vfat /dev/block/bootdevice/by-name/modem_a /firmware ro
+    wait /dev/block/bootdevice/by-name/dsp
+    wait /dev/block/bootdevice/by-name/modem
+    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp ro
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
 
 # QSEECOMd
     start _qseecomd
