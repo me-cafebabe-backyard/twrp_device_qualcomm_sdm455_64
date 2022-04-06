@@ -9,6 +9,9 @@ on boot
     start boot-hal-1-1
     start _qseecomd
     start adsprpcd_root
+
+# HBTP
+    chmod 0666 /dev/hbtp_input
     start hbtp
 
 service adsprpcd_root /system/bin/adsprpcd
