@@ -29,9 +29,18 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+  boot \
+  system \
+  vendor
+
 # Bootloader
+BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RECOVERY := true
 
 # Crypto
 BOARD_USES_QCOM_DECRYPTION := true
