@@ -1,5 +1,6 @@
 # mount point   fstype device                                   device2          flags
 /boot           emmc   /dev/block/bootdevice/by-name/boot                        flags=slotselect
+/vbmeta         emmc   /dev/block/bootdevice/by-name/vbmeta                      flags=display="VBMeta";slotselect;backup=1;flashimg=1
 /system_root    ext4   /dev/block/bootdevice/by-name/system                      flags=backup=0;display="System";slotselect
 /vendor         ext4   /dev/block/bootdevice/by-name/vendor                      flags=display="Vendor";slotselect
 

@@ -4,6 +4,7 @@
 
 #<src>						<mnt_point>		<type>	<mnt_flags and options>						<fs_mgr_flags>
 /dev/block/bootdevice/by-name/boot		/boot			emmc	defaults							defaults
+/dev/block/bootdevice/by-name/vbmeta		/vbmeta			emmc	defaults							defaults
 
 /dev/block/bootdevice/by-name/system		/system			ext4	ro								wait,recoveryonly,slotselect
 /dev/block/bootdevice/by-name/vendor		/vendor			ext4	ro								wait,recoveryonly,slotselect
