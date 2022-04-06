@@ -8,6 +8,10 @@ on fs
 on boot
     start boot-hal-1-1
     start _qseecomd
+
+# ADSP
+    chmod 0666 /sys/kernel/boot_adsp/boot
+    write /sys/kernel/boot_adsp/boot 1
     start adsprpcd_root
 
 # HBTP
