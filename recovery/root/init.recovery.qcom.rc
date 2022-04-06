@@ -8,9 +8,17 @@ on fs
 on boot
     start boot-hal-1-1
     start adsprpcd_root
+    start hbtp
 
 service adsprpcd_root /system/bin/adsprpcd
     user root
     group root
     disabled
     seclabel u:r:recovery:s0
+
+service hbtp /system/bin/hbtp_daemon
+    user root
+    group root
+    capabilities SYS_NICE
+    seclabel u:r:recovery:s0
+    disabled
