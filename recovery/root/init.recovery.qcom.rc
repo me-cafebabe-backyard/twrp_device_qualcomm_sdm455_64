@@ -7,6 +7,7 @@ on fs
 
 on boot
     start boot-hal-1-1
+    start _qseecomd
     start adsprpcd_root
     start hbtp
 
@@ -22,3 +23,10 @@ service hbtp /system/bin/hbtp_daemon
     capabilities SYS_NICE
     seclabel u:r:recovery:s0
     disabled
+
+service _qseecomd /system/bin/_qseecomd
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
