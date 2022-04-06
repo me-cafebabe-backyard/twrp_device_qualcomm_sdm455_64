@@ -7,3 +7,10 @@ on fs
 
 on boot
     start boot-hal-1-1
+    start adsprpcd_root
+
+service adsprpcd_root /system/bin/adsprpcd
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
