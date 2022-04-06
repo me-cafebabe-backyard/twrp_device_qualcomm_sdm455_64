@@ -66,9 +66,5 @@ PRODUCT_COPY_FILES += \
     bootable/recovery/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/vndservicemanager.rc
 endif
 
-# Keymaster
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.keystore=msm8937
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
