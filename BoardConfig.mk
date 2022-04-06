@@ -124,9 +124,11 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/tombstoned
 
 TARGET_RECOVERY_DEVICE_MODULES += \
     libandroidicu \
+    libhidlmemory \
     libxml2
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhidlmemory.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
 -include $(DEVICE_PATH)/BoardConfigOFOX.mk
