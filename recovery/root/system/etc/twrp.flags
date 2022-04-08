@@ -6,8 +6,8 @@
 
 /system_image   emmc   /dev/block/bootdevice/by-name/system                      flags=slotselect
 /vendor_image   emmc   /dev/block/bootdevice/by-name/vendor                      flags=slotselect
-/data           ext4   /dev/block/bootdevice/by-name/userdata                    flags=encryptable=footer
-/firmware       vfat   /dev/block/bootdevice/by-name/modem                       flags=display="Firmware";mounttodecrypt;slotselect
+/data           ext4   /dev/block/bootdevice/by-name/userdata
+/firmware       vfat   /dev/block/bootdevice/by-name/modem                       flags=display="Firmware";slotselect
 /persist        ext4   /dev/block/bootdevice/by-name/persist                     flags=display="Persist"
 /misc           emmc   /dev/block/bootdevice/by-name/misc
 /modem          emmc   /dev/block/bootdevice/by-name/modem                       flags=backup=1;display="Modem";slotselect

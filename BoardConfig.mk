@@ -43,20 +43,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := true
 
-# Crypto
-BOARD_USES_QCOM_DECRYPTION := true
-ifeq ($(wildcard vendor/qcom/opensource/cryptfs_hw/Android.bp),)
-TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
-else
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
-endif
-TARGET_HW_DISK_ENCRYPTION := true
-
-PLATFORM_VERSION := 127
-PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
-PLATFORM_SECURITY_PATCH := 2127-12-31
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
 # Kernel
 BOARD_KERNEL_CMDLINE := \
     console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom \
@@ -96,7 +82,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
-TW_INCLUDE_CRYPTO := true
 TW_MAX_BRIGHTNESS := 255
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -125,10 +110,12 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/tombstoned
 TARGET_RECOVERY_DEVICE_MODULES += \
     libandroidicu \
     libhidlmemory \
+    libhwbinder \
     libxml2
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libhidlmemory.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libhwbinder.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
 
 -include $(DEVICE_PATH)/BoardConfigOFOX.mk
