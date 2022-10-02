@@ -13,7 +13,8 @@ DEVICE_PATH := device/qualcomm/sdm455_64
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
   boot \
-  system
+  system \
+  vendor
 
 # Bootloader
 BOARD_USES_RECOVERY_AS_BOOT := true
