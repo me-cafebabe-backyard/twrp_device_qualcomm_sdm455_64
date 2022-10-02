@@ -1,3 +1,20 @@
+# ADSP
+service adsprpcd_root /system/bin/adsprpcd
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib/rfsa/adsp:/system/lib64
+    disabled
+    seclabel u:r:recovery:s0
+
+on boot
+    mkdir /dsp
+    mkdir /firmware
+    mount ext4 /dev/block/bootdevice/by-name/dsp_a /dsp ro
+    mount vfat /dev/block/bootdevice/by-name/modem_a /firmware ro
+    chmod 0666 /sys/kernel/boot_adsp/boot
+    write /sys/kernel/boot_adsp/boot 1
+    start adsprpcd_root
+
 # Boot control
 on boot
     start boot-hal-1-1
@@ -5,6 +22,23 @@ on boot
 # Decryption
 on init
     exec u:r:recovery:s0 -- /system/bin/detect-fbe.sh
+
+# HBTP
+service hbtp /system/bin/hbtp_daemon
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /vendor/lib/rfsa/adsp:/system/lib64
+    capabilities SYS_NICE
+    seclabel u:r:recovery:s0
+    disabled
+
+on init
+    chmod 0666 /dev/hbtp_input
+    mkdir /data/vendor
+    mkdir /data/vendor/hbtp
+
+on property:init.svc.adsprpcd_root=running
+    restart hbtp
 
 # HVDCP
 service hvdcp_opti /system/bin/hvdcp_opti
