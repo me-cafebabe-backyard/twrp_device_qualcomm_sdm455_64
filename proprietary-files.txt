@@ -47,3 +47,6 @@ system/lib64/android.hidl.allocator@1.0.so
 system/lib64/android.hidl.memory.token@1.0.so
 system/lib64/android.hidl.memory@1.0.so
 system/lib64/libhidlmemory.so
+
+# HVDCP
+vendor/bin/hvdcp_opti
