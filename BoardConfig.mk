@@ -40,6 +40,12 @@ BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware androidboot.selinux
 BOARD_KERNEL_CMDLINE += veritykeyid=id:
 TARGET_PREBUILT_KERNEL := device/qualcomm/kernel-sdm455_64/Image.gz-dtb
 
+BOARD_KERNEL_BASE        := 0x00000000
+BOARD_KERNEL_PAGESIZE    := 4096
+BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
+BOARD_RAMDISK_OFFSET     := 0x02000000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --base $(BOARD_KERNEL_BASE) --pagesize $(BOARD_KERNEL_PAGESIZE)
+
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
