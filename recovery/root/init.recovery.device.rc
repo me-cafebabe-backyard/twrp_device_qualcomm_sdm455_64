@@ -50,6 +50,24 @@ service hvdcp_opti /system/bin/hvdcp_opti
 on boot
     start hvdcp_opti
 
+# QSEECOMd
+service qseecomd /system/bin/true
+    override
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
+service _qseecomd /system/bin/qseecomd
+    user root
+    group root
+    setenv LD_LIBRARY_PATH /system/lib64
+    seclabel u:r:recovery:s0
+
+on boot
+    start _qseecomd
+
 # Workaround timestamp check
 on init
     exec u:r:recovery:s0 -- /system/bin/workaround-timestamp-check.sh
