@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     android.hidl.memory.token@1.0.recovery \
     android.hidl.memory@1.0.recovery
 
+# ION
+PRODUCT_PACKAGES += \
+    libion.recovery
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
