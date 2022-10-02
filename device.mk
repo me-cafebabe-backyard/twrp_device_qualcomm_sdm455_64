@@ -42,7 +42,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Vendor blobs
-ifneq ($(wildcard vendor/qualcomm/sdm455_64/proprietary/vendor),)
+ifneq ($(wildcard vendor/qualcomm/sdm455_64/proprietary),)
 PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/qualcomm/sdm455_64/proprietary/system,$(TARGET_COPY_OUT_RECOVERY)/root/system) \
     $(call find-copy-subdir-files,*,vendor/qualcomm/sdm455_64/proprietary/vendor,$(TARGET_COPY_OUT_RECOVERY)/root/system)
 endif

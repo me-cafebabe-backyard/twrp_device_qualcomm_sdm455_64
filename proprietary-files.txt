@@ -41,3 +41,9 @@ vendor/etc/hbtp/loader.cfg
 vendor/etc/hbtp/qtc800h.bin
 vendor/etc/hbtp/qtc800h_8998_660.bin
 vendor/etc/hbtp/qtc800s_dsp.bin
+
+# HIDL
+system/lib64/android.hidl.allocator@1.0.so
+system/lib64/android.hidl.memory.token@1.0.so
+system/lib64/android.hidl.memory@1.0.so
+system/lib64/libhidlmemory.so
