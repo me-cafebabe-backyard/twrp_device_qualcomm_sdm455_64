@@ -6,10 +6,6 @@ on boot
 on init
     exec u:r:recovery:s0 -- /system/bin/detect-fbe.sh
 
-# DT2W
-on init
-    write /proc/touchpanel/enable_dt2w 1
-
 # HVDCP
 service hvdcp_opti /system/bin/hvdcp_opti
     user root
