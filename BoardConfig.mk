@@ -22,6 +22,8 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Kernel
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 loop.max_part=7 swiotlb=1
+BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware androidboot.selinux=permissive # from mithorium-common
 BOARD_KERNEL_CMDLINE += veritykeyid=id:
 TARGET_PREBUILT_KERNEL := device/qualcomm/kernel-sdm455_64/Image.gz-dtb
 
