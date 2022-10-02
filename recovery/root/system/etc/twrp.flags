@@ -5,7 +5,6 @@
 
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=encryptable=footer;fsflags="discard"
-/metadata       ext4    /dev/block/bootdevice/by-name/logdump                   flags=display="Metadata";fsflags="discard"
 
 # Modem
 /firmware       vfat    /dev/block/bootdevice/by-name/modem                     flags=display="Firmware";fsflags="ro";mounttodecrypt
