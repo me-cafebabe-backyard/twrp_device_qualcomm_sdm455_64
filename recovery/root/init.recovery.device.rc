@@ -2,7 +2,7 @@
 service adsprpcd_root /system/bin/adsprpcd
     user root
     group root
-    setenv LD_LIBRARY_PATH /vendor/lib/rfsa/adsp:/system/lib64
+    setenv LD_LIBRARY_PATH /system/lib/rfsa/adsp:/system/lib64
     disabled
     seclabel u:r:recovery:s0
 
@@ -27,15 +27,15 @@ on init
 service hbtp /system/bin/hbtp_daemon
     user root
     group root
-    setenv LD_LIBRARY_PATH /vendor/lib/rfsa/adsp:/system/lib64
+    setenv LD_LIBRARY_PATH /system/lib/rfsa/adsp:/system/lib64
     capabilities SYS_NICE
     seclabel u:r:recovery:s0
     disabled
 
 on init
     chmod 0666 /dev/hbtp_input
-    mkdir /data/vendor
-    mkdir /data/vendor/hbtp
+    mkdir /tmp/vendor
+    mkdir /tmp/vendor/hbtp
 
 on property:init.svc.adsprpcd_root=running
     restart hbtp

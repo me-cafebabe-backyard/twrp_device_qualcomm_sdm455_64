@@ -53,6 +53,17 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/bin/hbtp_daemon|vendor/lib64/libadsprpc.so|vendor/lib64/libhbtpfrmwk.so)
+            sed -i 's|data/vendor/hbtp|/tmp/vendor/hbtp|g' "${2}"
+            sed -i 's|/vendor/etc/hbtp|/system/etc/hbtp|g' "${2}"
+            sed -i 's|/vendor/dsp|////////dsp|g' "${2}"
+            sed -i 's|vendor/lib/rfsa/adsp|system/lib/rfsa/adsp|g' "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
