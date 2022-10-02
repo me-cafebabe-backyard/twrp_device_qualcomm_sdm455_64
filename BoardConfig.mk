@@ -7,7 +7,7 @@
 # Inherit from common mithorium-common
 include device/xiaomi/mithorium-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/tissot
+DEVICE_PATH := device/qualcomm/sdm455_64
 
 # A/B
 AB_OTA_UPDATER := true
@@ -21,7 +21,7 @@ AB_OTA_PARTITIONS := \
 
 # Kernel
 BOARD_KERNEL_CMDLINE += veritykeyid=id:
-TARGET_PREBUILT_KERNEL := device/xiaomi/kernel-mithorium/tissot/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/qualcomm/kernel-sdm455_64/Image.gz-dtb
 
 # Partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true

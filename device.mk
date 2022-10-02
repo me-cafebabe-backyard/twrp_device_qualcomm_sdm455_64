@@ -34,9 +34,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti.recovery \
-    bootctrl.tissot.recovery
+    bootctrl.sdm455_64.recovery
 
-PRODUCT_VENDOR_PROPERTIES += ro.hardware.bootctrl=tissot
+PRODUCT_VENDOR_PROPERTIES += ro.hardware.bootctrl=sdm455_64
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

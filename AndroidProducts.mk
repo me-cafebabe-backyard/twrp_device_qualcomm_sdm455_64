@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_tissot.mk
+    $(LOCAL_DIR)/twrp_sdm455_64.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_tissot-user \
-    twrp_tissot-userdebug \
-    twrp_tissot-eng
+    twrp_sdm455_64-user \
+    twrp_sdm455_64-userdebug \
+    twrp_sdm455_64-eng

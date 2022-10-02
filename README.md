@@ -1,1 +1,1 @@
-# Device Tree for Xiaomi Mi A1 (tissot)
+# Device Tree for Qualcomm SDM455 (sdm455_64)
