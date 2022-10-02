@@ -40,3 +40,9 @@ PRODUCT_VENDOR_PROPERTIES += ro.hardware.bootctrl=sdm455_64
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
+
+# Vendor blobs
+ifneq ($(wildcard vendor/qualcomm/sdm455_64/proprietary/vendor),)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/qualcomm/sdm455_64/proprietary/vendor,$(TARGET_COPY_OUT_RECOVERY)/root/system)
+endif
