@@ -34,6 +34,9 @@ AB_OTA_PARTITIONS := \
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 loop.max_part=7 swiotlb=1
 BOARD_KERNEL_CMDLINE += firmware_class.path=/firmware/image androidboot.selinux=permissive # from mithorium-common

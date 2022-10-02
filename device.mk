@@ -40,6 +40,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_VENDOR_PROPERTIES += ro.hardware.bootctrl=sdm455_64
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.allocator@1.0.recovery \
+    android.hidl.memory.token@1.0.recovery \
+    android.hidl.memory@1.0.recovery
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
