@@ -1,0 +1,43 @@
+# Unpinned blobs from Android/sdm660_64/sdm660_64:9/PKQ1.180819.001/lnxbuild09061340:userdebug/test-keys
+
+# ADSP
+vendor/bin/adsprpcd
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libfastrpc_utf_stub.so
+
+# ADSP Modules
+vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
+vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so
+vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
+vendor/lib/rfsa/adsp/libadsp_fd_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
+vendor/lib/rfsa/adsp/libapps_mem_heap.so
+vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libfastcvadsp.so
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libvpp_svc_skel.so
+
+# HBTP
+vendor/bin/hbtp_daemon
+vendor/lib64/libhbtpclient.so
+vendor/lib64/libhbtpdsp.so
+vendor/lib64/libhbtpfrmwk.so
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
+
+# HBTP Configs
+vendor/etc/hbtp/hbtpcfg.dat
+vendor/etc/hbtp/hbtpcfg2.dat
+vendor/etc/hbtp/hbtpcfg_adsp_800s_fhd.dat
+vendor/etc/hbtp/hbtpcfg_sdm630_800s_fhd.dat
+vendor/etc/hbtp/hbtpcfg_sdm660_800h_qhd.dat
+vendor/etc/hbtp/hbtpcfg_sdm660_800s_qhd.dat
+vendor/etc/hbtp/loader.cfg
+vendor/etc/hbtp/qtc800h.bin
+vendor/etc/hbtp/qtc800h_8998_660.bin
+vendor/etc/hbtp/qtc800s_dsp.bin
