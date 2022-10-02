@@ -3,6 +3,9 @@
 # Boot
 /boot           emmc    /dev/block/bootdevice/by-name/boot                      flags=slotselect
 
+# VBMeta
+/vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                    flags=display="VBMeta";backup=1;flashimg=1;slotselect
+
 # Data
 /data           ext4    /dev/block/bootdevice/by-name/userdata                  flags=encryptable=footer;fsflags="discard"
 
